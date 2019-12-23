@@ -26,14 +26,14 @@ public class GuestActivity1 extends AppCompatActivity {
 
         guestListView = findViewById(R.id.guest_list);
 
-        //str = "Hello";
-        //str1 = "World";
-
+        str = "Hello";
+        str1 = "World";
+        String str3 = "hhhhh";
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
         guestListView.setAdapter(adapter);
 
-        //listItems.add(str);
-        //listItems.add(str1);
+        listItems.add(str);
+        listItems.add(str1);
 
         adapter.notifyDataSetChanged();
     }
