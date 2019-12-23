@@ -29,9 +29,6 @@ public class GuestActivity1 extends AppCompatActivity {
         //str = "Hello";
         //str1 = "World";
 
-        String str2 = "ori";
-        String str3 = "gri";
-
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
         guestListView.setAdapter(adapter);
 
