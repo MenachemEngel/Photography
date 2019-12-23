@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Photography</string>
+    <string name="title_activity_main">ברוך הבא\nמה תרצה לעשות?</string>
+    <string name="create_event">צור אירוע</string>
+    <string name="inter_event">כנס לאירוע</string>
+    <string name="other">אחר</string>
+    <string name="event_id">מזהה אירוע</string>
+    <string name="instruction_inter_event">הזן מזהה אירוע</string>
+    <string name="back">חזור</string>
+</resources>
