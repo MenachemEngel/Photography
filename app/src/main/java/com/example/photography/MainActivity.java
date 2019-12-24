@@ -8,22 +8,22 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+//Main activity class (activity)
 public class MainActivity extends AppCompatActivity {
 
-    //private Button goToEvent;
-
+    //onCreate function that create the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //call parent constructor
         super.onCreate(savedInstanceState);
+        //load the xml file
         setContentView(R.layout.activity_main);
 
-        //goToEvent = findViewById(R.id.int_event);
+        //move to GuestActivity1 by click the button of "Enter Event"
         findViewById(R.id.int_event).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this ,GuestActivity1.class);
             startActivity(intent);
         });
 
     }
-    //butter knife
 }

@@ -15,29 +15,36 @@ import android.widget.EditText;
 
 import java.util.LongSummaryStatistics;
 import java.util.zip.Inflater;
-
+//Event id dialog class (dialog)
 public class EventIdDialog extends DialogFragment {
 
+    //onCreateDialog function that create the dialog
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        //build the alert dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+        //get the layout inflater
         LayoutInflater inflater = requireActivity().getLayoutInflater();
 
+        //connect the view xml with the builder and set the buttons
         builder.setView(inflater.inflate(R.layout.event_id_dialog,null))
-                .setPositiveButton(R.string.inter_event, new DialogInterface.OnClickListener() {
+                //set continue button
+                .setPositiveButton(R.string.enter_event, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dismiss();
                     }
                 })
+                //set cancel button
                 .setNegativeButton(R.string.back, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dismiss();
                     }
                 });
+        //return the builder and create dialog
         return builder.create();
     }
 }

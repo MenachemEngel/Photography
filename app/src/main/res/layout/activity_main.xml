@@ -48,7 +48,7 @@
         android:id="@+id/int_event"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:text="@string/inter_event"
+        android:text="@string/enter_event"
         android:textSize="28sp"
         app:layout_constraintTop_toBottomOf="@+id/cre_event"
         tools:layout_editor_absoluteX="0dp" />
