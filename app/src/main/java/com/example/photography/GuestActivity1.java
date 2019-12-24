@@ -14,7 +14,7 @@ public class GuestActivity1 extends AppCompatActivity {
 
     private ListView guestListView;
     private TextView tv;
-    private String str,str1;
+    private String str,str1,str2,str3;
 
     ArrayList<String> listItems = new ArrayList<>();
     ArrayAdapter<String> adapter;
@@ -28,12 +28,14 @@ public class GuestActivity1 extends AppCompatActivity {
 
         str = "Hello";
         str1 = "World";
-        String str3 = "hddfdhhhh";
+        str2 = "Menachem David Engel";
+
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
         guestListView.setAdapter(adapter);
 
         listItems.add(str);
         listItems.add(str1);
+        listItems.add(str2);
 
         adapter.notifyDataSetChanged();
     }
