@@ -56,13 +56,13 @@ public class GuestActivity1 extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
         //listener to list view for password
-        guestListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            //open the dialog for event
+        guestListView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
+             //open the dialog for event
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //declaration EventIdDialog and show it
-                EventIdDialog dialog = new EventIdDialog();
-                dialog.show(getSupportFragmentManager(),"tag");
+            public void  onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //declaration  EventIdDialog and show it
+                EventIdDialog  dialog = new EventIdDialog();
+                dialog.show(getSupportFragmentManager() ,"tag");
             }
         });
     }
