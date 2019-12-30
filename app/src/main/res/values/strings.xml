@@ -7,4 +7,6 @@
     <string name="event_id">מזהה אירוע</string>
     <string name="instruction_inter_event">הזן מזהה אירוע</string>
     <string name="back">חזור</string>
+    <string name="delete">מחיקה</string>
+    <string name="camera">מצלמה</string>
 </resources>

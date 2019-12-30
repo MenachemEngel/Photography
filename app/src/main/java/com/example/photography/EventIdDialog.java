@@ -5,10 +5,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.EditText;
@@ -17,6 +19,8 @@ import java.util.LongSummaryStatistics;
 import java.util.zip.Inflater;
 //Event id dialog class (dialog)
 public class EventIdDialog extends DialogFragment {
+
+    private Activity dialogActivity;
 
     //onCreateDialog function that create the dialog
     @NonNull
@@ -34,7 +38,8 @@ public class EventIdDialog extends DialogFragment {
                 .setPositiveButton(R.string.enter_event, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        dismiss();
+                        Intent intent = new Intent(dialogActivity ,GuestActivity2.class);
+                        startActivity(intent);
                     }
                 })
                 //set cancel button
