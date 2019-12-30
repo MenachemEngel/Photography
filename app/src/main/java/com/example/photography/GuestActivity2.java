@@ -19,7 +19,7 @@ public class GuestActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //load the xml file
         setContentView(R.layout.activity_guest2);
-
+        //move to camera by click on cumera button
         findViewById(R.id.cumeraButton).setOnClickListener(v -> {
             dispatchTakePictureIntent();
         });

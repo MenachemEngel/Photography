@@ -1,7 +1,9 @@
 package com.example.photography;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //load the xml file
         setContentView(R.layout.activity_main);
+        //request for permission camera
+        ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{Manifest.permission.CAMERA},
+                1);
 
         //move to GuestActivity1 by click the button of "Enter Event"
         findViewById(R.id.int_event).setOnClickListener(v -> {

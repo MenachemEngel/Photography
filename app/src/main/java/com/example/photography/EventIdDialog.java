@@ -20,8 +20,6 @@ import java.util.zip.Inflater;
 //Event id dialog class (dialog)
 public class EventIdDialog extends DialogFragment {
 
-    private Activity dialogActivity;
-
     //onCreateDialog function that create the dialog
     @NonNull
     @Override
@@ -38,7 +36,8 @@ public class EventIdDialog extends DialogFragment {
                 .setPositiveButton(R.string.enter_event, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(dialogActivity ,GuestActivity2.class);
+                        //move to GuestActivity2 by click on event
+                        Intent intent = new Intent(getContext(),GuestActivity2.class);
                         startActivity(intent);
                     }
                 })
