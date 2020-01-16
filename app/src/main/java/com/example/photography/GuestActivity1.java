@@ -32,7 +32,7 @@ public class GuestActivity1 extends AppCompatActivity {
         //load the xml file
         setContentView(R.layout.activity_guest1);
 
-        //find the list view from xml by id to the variable guestListView
+        //find the list view from xml by id and connect it to the variable guestListView
         guestListView = findViewById(R.id.guest_list);
 
         //events names example
