@@ -33,20 +33,11 @@ public class GuestActivity2 extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     //array list for bitmap
     private ArrayList<Bitmap> images= new ArrayList<>();
-    //grid view for show the pictures
-    //private GridView gridView;
-
-    //image adapter to grid view
-    //private ImageAdapter adapter;
 
     //file for (jpg) image
     File currentFile = null;
 
     //------------------------
-    /*private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;*/
-    //private ArrayList<String> names = new ArrayList<>();
     private ArrayList<String> imageUrls = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerAdapter adapter;
@@ -88,9 +79,6 @@ public class GuestActivity2 extends AppCompatActivity {
         });
 
         initImageBitmap();
-
-
-        // TODO: load pictures already exist
     }
 
     private void initImageBitmap(){
@@ -131,9 +119,10 @@ public class GuestActivity2 extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
                 Bitmap bitmap = Utilities.getBitmapFromFile(currentFile.getPath());
                 images.add(bitmap);
-                //adapter = new ImageAdapter(GuestActivity2.this,images);
                 imageUrls.add(currentFile.getPath());
                 adapter.notifyDataSetChanged();
+        }else{
+            currentFile.delete();
         }
     }
 

@@ -5,54 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GuestActivity2">
+    tools:context=".OwnerActivity2">
 
-    <!-- <GridView
-         android:id="@+id/grid_view"
-
-         android:columnWidth="90dp"
-         android:numColumns="auto_fit"
-         android:verticalSpacing="10dp"
-         android:horizontalSpacing="10dp"
-         android:stretchMode="columnWidth"
-         android:gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:layout_weight="1"
-         tools:layout_editor_absoluteX="1dp"
-         tools:layout_editor_absoluteY="1dp"
-         />-->
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_owner"
-        android:scrollbars="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:id="@+id/container"
+        android:layout_weight="1"
+        android:layout_marginBottom="60dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_owner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-152dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/deleteButton"
+            android:id="@+id/deleteButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="@string/delete" />
 
         <Button
-            android:id="@+id/chooseButton"
+            android:id="@+id/chooseButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="@string/choose" />
 
         <Button
-            android:id="@+id/cameraButton"
+            android:id="@+id/cameraButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="@string/camera" />
 

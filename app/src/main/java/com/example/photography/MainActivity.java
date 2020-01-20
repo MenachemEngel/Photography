@@ -31,5 +31,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.cre_event).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this ,OwnerActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
