@@ -16,8 +16,17 @@ public class MainActivity extends AppCompatActivity {
     //onCreate function that create the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //for launch screen
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException ie){
+            System.out.println(ie.toString());
+        }
+        //change the theme from launch to background app
+        setTheme(R.style.AppTheme);
         //call parent constructor
         super.onCreate(savedInstanceState);
+
         //load the xml file
         setContentView(R.layout.activity_main);
         //request for permission camera

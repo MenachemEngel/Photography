@@ -8,17 +8,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
 
 import com.example.photography.adapters.ImageAdapter;
 import com.example.photography.adapters.RecyclerAdapter;
+import com.example.photography.utils.FontAwesome;
 import com.example.photography.utils.Utilities;
 
 import java.io.File;
@@ -33,7 +36,6 @@ public class GuestActivity2 extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     //array list for bitmap
     private ArrayList<Bitmap> images= new ArrayList<>();
-
     //file for (jpg) image
     File currentFile = null;
 
@@ -47,10 +49,20 @@ public class GuestActivity2 extends AppCompatActivity {
     //onCreate function that create the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //change the theme from launch to background app
+        setTheme(R.style.AppTheme);
         //call parent constructor
         super.onCreate(savedInstanceState);
         //load the xml file
         setContentView(R.layout.activity_guest2);
+
+        //for font awesome
+        Typeface iconFont = FontAwesome.getTypeface(getApplicationContext(), FontAwesome.FONTAWESOME);
+
+        Button cb = findViewById(R.id.cameraButton);
+        cb.setTypeface(iconFont);
+        Button delB = findViewById(R.id.deleteButton);
+        delB.setTypeface(iconFont);
 
         recyclerView = findViewById(R.id.recycler_view_guest);
         adapter = new RecyclerAdapter(this, imageUrls);

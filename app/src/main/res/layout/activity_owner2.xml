@@ -34,23 +34,31 @@
         <Button
             android:id="@+id/deleteButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:text="@string/delete" />
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:text="@string/fa_trash" />
 
         <Button
             android:id="@+id/chooseButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:text="@string/choose" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:text="@string/fa_pics" />
 
         <Button
             android:id="@+id/cameraButton_owner2"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:text="@string/camera" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:background="@color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:text="@string/fa_camera" />
 
     </LinearLayout>
 </LinearLayout>

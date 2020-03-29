@@ -6,13 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
+import android.widget.Button;
 
 import com.example.photography.adapters.RecyclerAdapter;
+import com.example.photography.utils.FontAwesome;
 import com.example.photography.utils.Utilities;
 
 import java.io.File;
@@ -39,8 +42,20 @@ public class OwnerActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //change the theme from launch to background app
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner2);
+
+        //for font awesome
+        Typeface iconFont = FontAwesome.getTypeface(getApplicationContext(), FontAwesome.FONTAWESOME);
+
+        Button cb = findViewById(R.id.cameraButton_owner2);
+        cb.setTypeface(iconFont);
+        Button delB = findViewById(R.id.deleteButton_owner2);
+        delB.setTypeface(iconFont);
+        Button colB = findViewById(R.id.chooseButton_owner2);
+        colB.setTypeface(iconFont);
 
         recyclerView = findViewById(R.id.recycler_view_owner);
         adapter = new RecyclerAdapter(this, imageUrls);

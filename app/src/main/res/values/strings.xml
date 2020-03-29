@@ -11,4 +11,8 @@
     <string name="camera">מצלמה</string>
     <string name="choose">בחר תמונות</string>
     <string name="create_event_form">טופס יצירת אירוע</string>
+    <string name="fa_camera">&#xf030;</string>
+    <string name="fa_trash">&#xf2ed;</string>
+    <string name="fa_pics">&#xf87c;</string>
+    <string name="loading">רק רגע \n טוען את האפליקציה...</string>
 </resources>

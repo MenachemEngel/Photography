@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.example.photography.utils.Globals;
 
 import java.util.ArrayList;
 //Guest activity1 class (activity)
@@ -27,6 +28,8 @@ public class GuestActivity1 extends AppCompatActivity {
     //onCreate function that create the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //change the theme from launch to background app
+        setTheme(R.style.AppTheme);
         //call parent constructor
         super.onCreate(savedInstanceState);
         //load the xml file
@@ -42,7 +45,7 @@ public class GuestActivity1 extends AppCompatActivity {
         str3 = "elchanan madmon";
 
         //init the adapter
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listItems);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Globals.listItemsGlobal);
         //set adapter to the list view
         guestListView.setAdapter(adapter);
 
