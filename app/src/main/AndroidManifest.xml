@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme2">
-        <activity android:name=".OwnerActivity2"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".OwnerActivity1" />
+        <activity android:name=".OwnerActivity2" />
         <activity android:name=".OwnerActivity" />
         <activity android:name=".GuestActivity2" />
         <activity android:name=".GuestActivity1" />

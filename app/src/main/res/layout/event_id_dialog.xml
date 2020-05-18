@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/light_grey_terrazzo_dialog"
     tools:context=".EventIdDialog">
 
 

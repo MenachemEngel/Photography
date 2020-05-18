@@ -25,40 +25,47 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/deleteButton_owner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:background="@color/transparent"
+            android:text="@string/fa_trash"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp"
-            android:text="@string/fa_trash" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
 
         <Button
             android:id="@+id/chooseButton_owner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:background="@color/transparent"
+            android:text="@string/fa_pics"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp"
-            android:text="@string/fa_pics" />
+            app:layout_constraintEnd_toStartOf="@+id/cameraButton_owner2"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/deleteButton_owner2"
+            tools:layout_editor_absoluteY="0dp" />
 
         <Button
             android:id="@+id/cameraButton_owner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
+            android:layout_marginEnd="28dp"
             android:background="@color/transparent"
+            android:text="@string/fa_camera"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp"
-            android:text="@string/fa_camera" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -5,8 +5,7 @@
     </item>
     <item>
         <bitmap
-            android:src="@drawable/start_screen"
-            android:tileMode="disabled"
-            android:gravity="fill_vertical|fill_horizontal" />
+            android:src="@drawable/light_grey_terrazzo"
+            android:tileMode="repeat" />
     </item>
 </layer-list>

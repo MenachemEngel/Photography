@@ -1,17 +1,29 @@
 package com.example.photography;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.photography.database.Event;
+import com.example.photography.database.Hall;
 import com.example.photography.utils.Globals;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
 //Guest activity1 class (activity)
 public class GuestActivity1 extends AppCompatActivity {
 
@@ -28,6 +40,7 @@ public class GuestActivity1 extends AppCompatActivity {
     //onCreate function that create the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         //change the theme from launch to background app
         setTheme(R.style.AppTheme);
         //call parent constructor
@@ -35,28 +48,19 @@ public class GuestActivity1 extends AppCompatActivity {
         //load the xml file
         setContentView(R.layout.activity_guest1);
 
+
+
         //find the list view from xml by id and connect it to the variable guestListView
         guestListView = findViewById(R.id.guest_list);
-
-        //events names example
-        str = "Hello";
-        str1 = "World";
-        str2 = "Menachem David Engel";
-        str3 = "elchanan madmon";
 
         //init the adapter
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Globals.listItemsGlobal);
         //set adapter to the list view
         guestListView.setAdapter(adapter);
 
-        //add names event to listItems
-        listItems.add(str);
-        listItems.add(str1);
-        listItems.add(str2);
-        listItems.add(str3);
-
         //load the changes
         adapter.notifyDataSetChanged();
+
 
         //listener to list view for password
         guestListView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
@@ -70,5 +74,5 @@ public class GuestActivity1 extends AppCompatActivity {
         });
     }
 
-            //Trying commit
+
 }

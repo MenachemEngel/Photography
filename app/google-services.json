@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "201340886921",
+    "firebase_url": "https://photography-538ce.firebaseio.com",
+    "project_id": "photography-538ce",
+    "storage_bucket": "photography-538ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201340886921:android:f1e78b2ee647588bf30b58",
+        "android_client_info": {
+          "package_name": "com.example.photography"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201340886921-fjprksoh233bvug0orp9s8ns1jrrilks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy7GO10NKPtPqSw46fkOLDXRxuZzrZ8bQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201340886921-fjprksoh233bvug0orp9s8ns1jrrilks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

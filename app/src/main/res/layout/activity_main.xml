@@ -32,26 +32,73 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
+<!--    <Button-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="90dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/create_event"-->
+<!--        android:textSize="28sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/first_title" />-->
+
+
+
+<!--    <Button-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="90dp"-->
+<!--        android:text="@string/enter_event"-->
+<!--        android:textSize="28sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cre_event"-->
+<!--        tools:layout_editor_absoluteX="0dp" />-->
+
     <Button
-        android:id="@+id/cre_event"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:id="@+id/int_event"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:text="@string/create_event"
-        android:textSize="28sp"
+        android:background="@drawable/button_selector"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/enter_event"
+        android:textColor="#000000"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_title" />
 
     <Button
-        android:id="@+id/int_event"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text="@string/enter_event"
-        android:textSize="28sp"
-        app:layout_constraintTop_toBottomOf="@+id/cre_event"
-        tools:layout_editor_absoluteX="0dp" />
+        android:id="@+id/to_register"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_selector"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/register"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/int_event" />
 
+    <TextView
+        android:id="@+id/last_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/register_msg"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/to_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

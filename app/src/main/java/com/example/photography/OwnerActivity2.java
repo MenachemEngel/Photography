@@ -13,10 +13,13 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.photography.adapters.RecyclerAdapter;
 import com.example.photography.utils.FontAwesome;
 import com.example.photography.utils.Utilities;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,15 +75,25 @@ public class OwnerActivity2 extends AppCompatActivity {
             }
         }
 
-        recyclerView.setOnClickListener(view -> {
-            String str = recyclerView.getAdapter().toString();
-            File file = new File(str);
-            file.delete();
-        });
-
         //move to camera by click on camera button
         findViewById(R.id.cameraButton_owner2).setOnClickListener(v -> {
             dispatchTakePictureIntent();
+        });
+
+        findViewById(R.id.deleteButton_owner2).setOnClickListener(v -> {
+            try {
+                String str = recyclerView.getAdapter().toString();
+                new File(str).delete();
+                imageUrls.remove(recyclerView.getAdapter().toString());
+                adapter.notifyDataSetChanged();
+                Toast.makeText(this, "File Deleted", Toast.LENGTH_LONG).show();
+            }catch (NullPointerException e){
+                Toast.makeText(this, "File Not Found", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        findViewById(R.id.chooseButton_owner2).setOnClickListener(v -> {
+
         });
 
         initImageBitmap();

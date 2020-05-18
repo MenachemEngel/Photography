@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OwnerActivity">
+
+    <TextView
+        android:id="@+id/textView_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:text="@string/create_event_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="שם מלא"
+        app:layout_constraintTop_toBottomOf="@+id/textView_owner1"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/editTextEventType_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="סוג אירוע"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName_owner1"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <EditText
+        android:id="@+id/editTextHallName_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="שם האולם"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEventType_owner1"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHallName_owner1"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/editTextStreet_owner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="רחוב"
+            />
+
+        <EditText
+            android:id="@+id/editTextStreetNumber_owner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="מספר"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextCityName_owner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="עיר"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_owner1"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <Button
+        android:id="@+id/button_halls_owner1"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_selector"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="רשימת אולמות"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCityName_owner1" />
+
+    <Button
+        android:id="@+id/buttonCreateEvent_owner1"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_selector"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/create_event"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_halls_owner1" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/int_event"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="80dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:background="@drawable/button_selector"-->
+    <!--        android:shadowColor="#A8A8A8"-->
+    <!--        android:shadowDx="0"-->
+    <!--        android:shadowDy="0"-->
+    <!--        android:shadowRadius="5"-->
+    <!--        android:text="@string/enter_event"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textSize="30sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.491"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/cre_event" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

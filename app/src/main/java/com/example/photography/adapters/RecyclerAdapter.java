@@ -1,6 +1,7 @@
 package com.example.photography.adapters;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -33,6 +34,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ArrayList<String> images = new ArrayList<>();
     private Context context;
     private String lastClicked;
+    private ImageViewerFragment fr;
+    private FragmentTransaction fragmentTransaction;
+    private FragmentManager manager;
+    private Bundle bundle;
 
     public RecyclerAdapter( Context context/*, ArrayList<String> imageNames*/, ArrayList<String> images) {
         //this.imageNames = imageNames;
@@ -57,16 +62,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 .into(holder.image);
         //holder.imageName.setText(imageNames.get(position));
         holder.layout.setOnClickListener(view ->  {
-            //Log.d(TAG, "clicked on: " + imageNames.get(position));
-            Toast.makeText(context, images.get(holder.getPosition()), Toast.LENGTH_SHORT).show();
             lastClicked = images.get(holder.getPosition());
             //-----------------------------------------------
-            FragmentManager manager = ((Activity)context).getFragmentManager();
-            Bundle bundle = new Bundle();
+            manager = ((Activity)context).getFragmentManager();
+            bundle = new Bundle();
             bundle.putString("img",images.get(position));
-            ImageViewerFragment fr = new ImageViewerFragment();
+            fr = new ImageViewerFragment();
             fr.setArguments(bundle);
-            FragmentTransaction fragmentTransaction = manager.beginTransaction();
+            fragmentTransaction = manager.beginTransaction();
             fragmentTransaction.replace(R.id.container, fr).addToBackStack(null);
             fragmentTransaction.commit();
             //-----------------------------------------------
@@ -76,6 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @NonNull
     @Override
     public String toString() {
+        manager.beginTransaction().remove(fr).commit();
         return lastClicked;
     }
 

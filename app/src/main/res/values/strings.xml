@@ -15,4 +15,12 @@
     <string name="fa_trash">&#xf2ed;</string>
     <string name="fa_pics">&#xf87c;</string>
     <string name="loading">רק רגע \n טוען את האפליקציה...</string>
+    <string name="register">הרשמה</string>
+    <string name="register_msg">על מנת ליצור אירוע יש להירשם תחילה.</string>
+    <string name="create_account_form">טופס יצירת חשבון</string>
+    <string name="create">צור</string>
+    <string name="first_name">שם פרטי</string>
+    <string name="last_name">שם משפחה</string>
+    <string name="email">דואר אלקטרוני</string>
+    <string name="password">סיסמה</string>
 </resources>

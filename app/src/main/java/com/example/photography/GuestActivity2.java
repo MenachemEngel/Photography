@@ -18,6 +18,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.photography.adapters.ImageAdapter;
 import com.example.photography.adapters.RecyclerAdapter;
@@ -58,7 +59,6 @@ public class GuestActivity2 extends AppCompatActivity {
 
         //for font awesome
         Typeface iconFont = FontAwesome.getTypeface(getApplicationContext(), FontAwesome.FONTAWESOME);
-
         Button cb = findViewById(R.id.cameraButton);
         cb.setTypeface(iconFont);
         Button delB = findViewById(R.id.deleteButton);
@@ -79,15 +79,21 @@ public class GuestActivity2 extends AppCompatActivity {
             }
         }
 
-        recyclerView.setOnClickListener(view -> {
-            String str = recyclerView.getAdapter().toString();
-            File file = new File(str);
-            file.delete();
-        });
-
         //move to camera by click on camera button
         findViewById(R.id.cameraButton).setOnClickListener(v -> {
             dispatchTakePictureIntent();
+        });
+
+        findViewById(R.id.deleteButton).setOnClickListener(v -> {
+            try {
+                String str = recyclerView.getAdapter().toString();
+                new File(str).delete();
+                imageUrls.remove(recyclerView.getAdapter().toString());
+                adapter.notifyDataSetChanged();
+                Toast.makeText(this, "File Deleted", Toast.LENGTH_LONG).show();
+            }catch (NullPointerException e){
+                Toast.makeText(this, "File Not Found", Toast.LENGTH_LONG).show();
+            }
         });
 
         initImageBitmap();
