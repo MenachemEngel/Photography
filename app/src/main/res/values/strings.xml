@@ -1,26 +1,53 @@
 <resources>
     <string name="app_name">Photography</string>
+    <string name="logo">לוגו</string>
     <string name="title_activity_main">ברוך הבא\nמה תרצה לעשות?</string>
     <string name="create_event">צור אירוע</string>
     <string name="enter_event">כנס לאירוע</string>
+    <string name="enter_account">כנס</string>
     <string name="other">אחר</string>
     <string name="event_id">מזהה אירוע</string>
     <string name="instruction_inter_event">הזן מזהה אירוע</string>
     <string name="back">חזור</string>
     <string name="delete">מחיקה</string>
+    <string name="delete_event">מחיקת אירוע</string>
     <string name="camera">מצלמה</string>
     <string name="choose">בחר תמונות</string>
     <string name="create_event_form">טופס יצירת אירוע</string>
     <string name="fa_camera">&#xf030;</string>
     <string name="fa_trash">&#xf2ed;</string>
-    <string name="fa_pics">&#xf87c;</string>
-    <string name="loading">רק רגע \n טוען את האפליקציה...</string>
+    <string name="fa_pics">&#xf019;</string>
+    <string name="fa_refresh">&#xf021;</string>
+    <string name="loading">רק רגע \n טוען את האפליקציה…</string>
     <string name="register">הרשמה</string>
+    <string name="register_and_entering">הרשמה וכניסה</string>
+    <string name="entering">כניסה לחשבון</string>
     <string name="register_msg">על מנת ליצור אירוע יש להירשם תחילה.</string>
     <string name="create_account_form">טופס יצירת חשבון</string>
     <string name="create">צור</string>
     <string name="first_name">שם פרטי</string>
     <string name="last_name">שם משפחה</string>
     <string name="email">דואר אלקטרוני</string>
+    <string name="enter_email">הזן דואר אלקטרוני</string>
     <string name="password">סיסמה</string>
+    <string name="choose_date">בחר תאריך</string>
+    <string name="link_to_register">הירשם</string>
+    <string name="link_to_login">התחבר</string>
+    <string name="logout">התנתק</string>
+    <string name="help">עזרה</string>
+    <string name="about">אודות</string>
+    <string name="about_text">אפליקציית PHOTOGRAPHY לצילום ושיתוף אירועים,\n
+היא פרויקט גמר במדעי המחשב במכללת הדסה, קמפוס שטראוס.\n
+האפליקציה נבנתה על ידי מנחם אנגל.</string>
+    <string name="my_events">האירועים שלי</string>
+    <string name="reset_password">איפוס סיסמה</string>
+    <string name="email_body">גוף ההודעה</string>
+    <string name="email_subject">כותרת ההודעה</string>
+    <string name="email_send">שלח הודעה</string>
+    <string name="ok">אישור</string>
+    <string name="halls_list">רשימת אולמות</string>
+    <string name="cre_poster">צור פוסטר</string>
+    <string name="refresh">רענן</string>
+
 </resources>
+

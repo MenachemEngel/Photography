@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/reg_toolbar"
+        android:id="@+id/ali_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,101 +16,87 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/reg_toolbar"
+        android:layout_below="@+id/ali_toolbar"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".activities.RegisterActivity">
+            tools:context=".activities.LoginActivity">
 
             <ImageView
-                android:id="@+id/reg_logo"
+                android:id="@+id/imageView_enter_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/logo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/reg_title"
-                android:layout_width="match_parent"
+                android:id="@+id/tv_enter_account"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:text="@string/create_account_form"
+                android:text="@string/entering"
                 android:textSize="40sp"
-                app:layout_constraintTop_toBottomOf="@+id/reg_logo"
-                tools:layout_editor_absoluteX="148dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_enter_account" />
 
             <TextView
-                android:id="@+id/reg_link"
+                android:id="@+id/link_enter_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/link_to_login"
-                android:textSize="20sp"
+                android:text="@string/link_to_register"
                 android:textColor="@color/bg_main"
-
+                android:textFontWeight="bold"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reg_title" />
-
-            <!--android:textFontWeight="bold"-->
+                app:layout_constraintTop_toBottomOf="@+id/tv_enter_account" />
 
             <EditText
-                android:id="@+id/reg_fn"
+                android:id="@+id/et_enter_account1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="@string/first_name"
-                android:autofillHints="@string/common_google_play_services_enable_text"
-                app:layout_constraintTop_toBottomOf="@+id/reg_link"
-                tools:layout_editor_absoluteX="99dp" />
-
-            <EditText
-                android:id="@+id/reg_ln"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="@string/last_name"
-                android:autofillHints="@string/common_google_play_services_enable_text"
-                app:layout_constraintTop_toBottomOf="@+id/reg_fn"
-                tools:layout_editor_absoluteX="101dp" />
-
-            <EditText
-                android:id="@+id/reg_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:autofillHints="@string/common_google_play_services_enable_text"
-                app:layout_constraintTop_toBottomOf="@+id/reg_ln"
-                tools:layout_editor_absoluteX="99dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/link_enter_account" />
 
             <EditText
-                android:id="@+id/reg_pwrd"
+                android:id="@+id/et_enter_account2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:autofillHints="@string/common_google_play_services_enable_text"
-                app:layout_constraintTop_toBottomOf="@+id/reg_email"
-                tools:layout_editor_absoluteX="101dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_enter_account1" />
+
+           <!-- <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/enter_account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_enter_account2" /> -->
 
             <Button
-                android:id="@+id/reg_btn"
+                android:id="@+id/btn_enter_account"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -123,13 +109,14 @@
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="5"
-                android:text="@string/create"
+                android:text="@string/enter_account"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reg_pwrd"
+                app:layout_constraintTop_toBottomOf="@+id/et_enter_account2"
                 app:layout_constraintVertical_bias="0.03" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

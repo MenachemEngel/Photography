@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="end"
-    tools:context=".GuestActivity1">
+    tools:context=".activities.GuestActivity1">
 
     <TextView
         android:id="@+id/guest_title"

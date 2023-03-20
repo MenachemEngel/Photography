@@ -1,10 +1,11 @@
 package com.example.photography.database;
 
 public class Hall {
-    String name;
-    String street;
-    int number;
-    String city;
+    private String name;
+    private String street;
+    private int number;
+    private String city;
+    private String id;
 
     public Hall(){}
 
@@ -13,6 +14,7 @@ public class Hall {
         this.street = street;
         this.number = number;
         this.city = city;
+        this.id = name+street+number+city;
     }
 
     public String getName() {
@@ -45,5 +47,18 @@ public class Hall {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + street + ", " + number + ", " + city;
     }
 }

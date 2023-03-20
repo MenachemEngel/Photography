@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mg_about"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/mg_help"
+        android:title="@string/reset_password" />
+
+    <item
+        android:id="@+id/mg_reg"
+        android:title="@string/register" />
+
+    <item
+        android:id="@+id/mg_login"
+        android:title="@string/link_to_login" />
+
+</menu>

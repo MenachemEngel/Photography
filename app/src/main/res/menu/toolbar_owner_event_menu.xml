@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/moe_about"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/moe_help"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/moe_poster"
+        android:title="@string/cre_poster" />
+
+    <item
+        android:id="@+id/moe_delete_event"
+        android:title="@string/delete_event" />
+
+    <item
+        android:id="@+id/moe_logout"
+        android:title="@string/logout" />
+
+</menu>

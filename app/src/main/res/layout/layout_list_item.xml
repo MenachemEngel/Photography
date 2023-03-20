@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="10dp"
@@ -13,4 +13,18 @@
         android:layout_height="150dp"
         app:srcCompat="@drawable/logo" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/fa_trash"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="100dp"
+        android:textColor="@color/colorPrimary"
+        android:padding="12dip"/>
+
+</RelativeLayout>

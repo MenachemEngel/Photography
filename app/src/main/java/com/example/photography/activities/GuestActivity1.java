@@ -1,26 +1,16 @@
-package com.example.photography;
+package com.example.photography.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.photography.database.Event;
-import com.example.photography.database.Hall;
+import com.example.photography.dialogs.EventIdDialog;
+import com.example.photography.R;
 import com.example.photography.utils.Globals;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -68,11 +58,10 @@ public class GuestActivity1 extends AppCompatActivity {
             @Override
             public void  onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //declaration  EventIdDialog and show it
-                EventIdDialog  dialog = new EventIdDialog();
+                EventIdDialog dialog = new EventIdDialog();
                 dialog.show(getSupportFragmentManager() ,"tag");
             }
         });
     }
-
 
 }

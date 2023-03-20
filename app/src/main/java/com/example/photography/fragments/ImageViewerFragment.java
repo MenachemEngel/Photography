@@ -1,4 +1,4 @@
-package com.example.photography;
+package com.example.photography.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 
 
 import com.bumptech.glide.Glide;
+import com.example.photography.R;
 
 import java.io.File;
 import java.util.zip.Inflater;
