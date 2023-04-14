@@ -1,6 +1,6 @@
 # Photography App
 
-this is final project of the B.Sc. program. This is an Android app for sharing photos that guests take at an event with the event owner.
+This is final project of the B.Sc. program. This is an Android app for sharing photos that guests take at an event with the event owner.
 The app was built using Java and Android in the Android Studio environment. Both the database and storage are Firebase.
 
 ## Develop by:
